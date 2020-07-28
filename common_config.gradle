@@ -1,0 +1,149 @@
+project.ext {
+    //项目版本信息
+    applicationId = "com.snail.mbcomponent"
+    compileSdkVersion = 29
+    minSdkVersion = 21
+    targetSdkVersion = 29
+    versionCode = 1
+    versionName = "1.0"
+
+    //是否允许module单独调试
+    isModuleDebug = false
+
+    //项目依赖
+    libs = [
+            room_version: "2.1.4"
+    ]
+
+    //接口地址
+    url = [
+            //开发环境地址
+            debug_url  : "",
+            //测试环境地址
+            test_url   : "",
+            //生产环境地址
+            release_url: ""
+    ]
+
+    //app默认配置
+    appDefaultConfig = {
+        extension ->
+            extension.apply plugin: 'com.android.application'
+            extension.apply plugin: 'kotlin-android'
+            extension.apply plugin: 'kotlin-android-extensions'
+            extension.apply plugin: 'kotlin-kapt'
+            extension.description "app"
+            //app android 配置
+            appAndroidConfig extension.android
+            //kapt 配置
+            kaptConfig extension.kapt
+            //app dependencies 配置
+            defaultDependencies extension.dependencies
+    }
+
+    //lib默认配置
+    libDefaultConfig = {
+        extension ->
+            extension.apply plugin: 'com.android.library'
+            extension.apply plugin: 'kotlin-android'
+            extension.apply plugin: 'kotlin-android-extensions'
+            extension.apply plugin: 'kotlin-kapt'
+            extension.description "lib"
+            //lib android 配置
+            libAndroidConfig extension.android
+            //kapt 配置
+            kaptConfig extension.kapt
+            //app dependencies 配置
+            defaultDependencies extension.dependencies
+    }
+
+    //设置lib配置（可作为project单独调试）
+    appOrLibDefaultConfig = {
+        extension ->
+            if (project.ext.isModuleDebug) {
+                extension.apply plugin: 'com.android.application'
+                extension.description "app"
+            } else {
+                extension.apply plugin: 'com.android.library'
+                extension.description "lib"
+            }
+            //设置通用Android配置
+            appOrLibAndroidConfig extension.android
+            //kapt 配置
+            kaptConfig extension.kapt
+            //设置通用依赖配置
+            defaultDependencies extension.dependencies
+    }
+
+    //app android 配置
+    appAndroidConfig = {
+        extension ->
+            extension.compileSdkVersion project.ext.compileSdkVersion
+            extension.defaultConfig {
+                applicationId project.ext.applicationId
+                minSdkVersion project.ext.minSdkVersion
+                targetSdkVersion project.ext.targetSdkVersion
+                versionCode project.ext.versionCode
+                versionName project.ext.versionName
+            }
+            extension.dataBinding {
+                enabled = true
+            }
+    }
+
+    libAndroidConfig = {
+        extension ->
+            extension.compileSdkVersion project.ext.compileSdkVersion
+            extension.defaultConfig {
+                minSdkVersion project.ext.minSdkVersion
+                targetSdkVersion project.ext.targetSdkVersion
+                versionCode project.ext.versionCode
+                versionName project.ext.versionName
+            }
+    }
+
+    //设置lib android配置（可作为project单独调试）
+    appOrLibAndroidConfig = {
+        extension -> //extension 相当于 android 对象
+            extension.compileSdkVersion project.ext.compileSdkVersion
+            extension.defaultConfig {
+                minSdkVersion project.ext.minSdkVersion
+                targetSdkVersion project.ext.targetSdkVersion
+                versionCode project.ext.versionCode
+                versionName project.ext.versionName
+            }
+            if (project.ext.isModuleDebug) {
+                extension.dataBinding {
+                    enabled = true
+                }
+            }
+            extension.sourceSets {
+                main {
+                    if (project.ext.isModuleDebug) {
+                        manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+                    } else {
+                        manifest.srcFile 'src/main/AndroidManifest.xml'
+                    }
+                }
+            }
+    }
+
+    //kapt默认配置
+    kaptConfig = {
+        extension ->
+            extension.arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+    }
+
+    //默认依赖
+    defaultDependencies = {
+        extension ->
+            extension.implementation fileTree(dir: 'libs', include: ['*.jar'])
+            //ARouter 路由apt插件，用于生成相应代码，每个module都需要
+            extension.kapt 'com.alibaba:arouter-compiler:1.2.2'
+    }
+}
+
+
+

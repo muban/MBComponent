@@ -1,0 +1,30 @@
+apply from: "${rootProject.rootDir}/common_config.gradle"
+//lib默认配置
+project.ext.libDefaultConfig project
+
+android {
+    resourcePrefix "common_"
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.8'
+    api 'androidx.core:core-ktx:1.3.1'
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //ARouter路由器框架
+    api 'com.alibaba:arouter-api:1.5.0'
+    //基础组件
+    api project(path: ':net')
+}
