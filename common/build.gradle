@@ -1,6 +1,6 @@
 apply from: "${rootProject.rootDir}/common_config.gradle"
 //lib默认配置
-project.ext.libDefaultConfig project
+libDefaultConfig project
 
 android {
     resourcePrefix "common_"

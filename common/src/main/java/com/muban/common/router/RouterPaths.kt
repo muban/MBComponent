@@ -9,6 +9,9 @@ class RouterPaths {
         //支付模块
         private const val GROUP_PAY = "pay"
 
+        //练习模块
+        private const val GROUP_DEMO = "demo"
+
         //登录页
         const val LOGIN_ACTIVITY = "/${GROUP_LOGIN}/LOGIN_ACTIVITY"
 
@@ -20,5 +23,8 @@ class RouterPaths {
 
         //支付宝
         const val ALI_ACTIVITY = "/${GROUP_PAY}/ALI_ACTIVITY"
+
+        //练习一
+        const val DEMO_ONE_ACTIVITY = "/${GROUP_PAY}/DEMO_ONE_ACTIVITY"
     }
 }

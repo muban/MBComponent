@@ -51,10 +51,24 @@ project.ext {
             extension.description "lib"
             //lib android 配置
             libAndroidConfig extension.android
-            //kapt 配置
+            //apt 配置
             kaptConfig extension.kapt
             //app dependencies 配置
             defaultDependencies extension.dependencies
+    }
+
+    //lib无依赖配置
+    libWithoutDependenciesConfig = {
+        extension ->
+            extension.apply plugin: 'com.android.library'
+            extension.apply plugin: 'kotlin-android'
+            extension.apply plugin: 'kotlin-android-extensions'
+            extension.apply plugin: 'kotlin-kapt'
+            extension.description "lib"
+            //lib android 配置
+            libAndroidConfig extension.android
+            //apt 配置
+            kaptConfig extension.kapt
     }
 
     //设置lib配置（可作为project单独调试）
@@ -69,7 +83,7 @@ project.ext {
             }
             //设置通用Android配置
             appOrLibAndroidConfig extension.android
-            //kapt 配置
+            //apt 配置
             kaptConfig extension.kapt
             //设置通用依赖配置
             defaultDependencies extension.dependencies
@@ -128,7 +142,7 @@ project.ext {
             }
     }
 
-    //kapt默认配置
+    //ARouter默认配置
     kaptConfig = {
         extension ->
             extension.arguments {

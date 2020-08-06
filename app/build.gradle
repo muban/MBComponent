@@ -1,5 +1,5 @@
 apply from: "${rootProject.rootDir}/common_config.gradle"
-project.ext.appDefaultConfig project
+appDefaultConfig project
 
 android {
     buildTypes {
@@ -12,4 +12,5 @@ android {
 
 dependencies {
     implementation project(path: ':common')
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
 }
