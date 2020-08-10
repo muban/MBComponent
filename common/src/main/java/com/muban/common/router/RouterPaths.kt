@@ -26,5 +26,8 @@ class RouterPaths {
 
         //练习一
         const val DEMO_ONE_ACTIVITY = "/${GROUP_PAY}/DEMO_ONE_ACTIVITY"
+
+        //练习二
+        const val DEMO_TWO_ACTIVITY = "/${GROUP_PAY}/DEMO_TWO_ACTIVITY"
     }
 }

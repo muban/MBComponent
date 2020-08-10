@@ -15,6 +15,10 @@
         <variable
             name="demo1"
             type="String" />
+
+        <variable
+            name="demo2"
+            type="String" />
     </data>
 
     <LinearLayout
@@ -51,5 +55,13 @@
             android:textColor="#000"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/btn_demo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{demo2}"
+            android:textColor="#000"
+            android:textSize="20sp" />
     </LinearLayout>
 </layout>

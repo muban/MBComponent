@@ -12,6 +12,9 @@ import com.snail.mbcomponent.R
 import com.snail.mbcomponent.adapter.DemoOneAdapter
 import com.snail.mbcomponent.databinding.ActivityDemoOneBinding
 
+/**
+ * layoutManager练习
+ */
 @Route(path = RouterPaths.DEMO_ONE_ACTIVITY)
 class DemoOneActivity : AppCompatActivity() {
 

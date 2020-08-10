@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         dataBinding.login = "Login !"
         dataBinding.registered = "Registered !"
-        dataBinding.demo1 = "DEMO-1"
+        dataBinding.demo1 = "Demo-LayoutManager"
+        dataBinding.demo2 = "Demo-Canvas"
         dataBinding.tvLogin.setOnClickListener {
             ARouter.getInstance().build(RouterPaths.LOGIN_ACTIVITY).navigation()
         }
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         }
         dataBinding.btnDemo1.setOnClickListener {
             ARouter.getInstance().build(RouterPaths.DEMO_ONE_ACTIVITY).navigation()
+        }
+        dataBinding.btnDemo2.setOnClickListener {
+            ARouter.getInstance().build(RouterPaths.DEMO_TWO_ACTIVITY).navigation()
         }
         //协程请求
 //        lifecycleScope.launchWhenResumed {
