@@ -4,64 +4,17 @@
 
     <data>
 
-        <variable
-            name="login"
-            type="String" />
-
-        <variable
-            name="registered"
-            type="String" />
-
-        <variable
-            name="demo1"
-            type="String" />
-
-        <variable
-            name="demo2"
-            type="String" />
     </data>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".demo.MainActivity">
 
-        <TextView
-            android:id="@+id/tv_login"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_demo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{login}"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tv_registered"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@{registered}"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btn_demo1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@{demo1}"
-            android:textColor="#000"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btn_demo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@{demo2}"
-            android:textColor="#000"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:layout_gravity="center" />
+    </FrameLayout>
 </layout>

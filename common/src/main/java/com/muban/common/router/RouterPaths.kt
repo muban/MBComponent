@@ -6,28 +6,16 @@ class RouterPaths {
         //登录模块
         private const val GROUP_LOGIN = "login"
 
-        //支付模块
-        private const val GROUP_PAY = "pay"
-
         //练习模块
         private const val GROUP_DEMO = "demo"
 
         //登录页
         const val LOGIN_ACTIVITY = "/${GROUP_LOGIN}/LOGIN_ACTIVITY"
 
-        //注册页
-        const val REGISTERED_ACTIVITY = "/${GROUP_LOGIN}/REGISTERED_ACTIVITY"
-
-        //微信
-        const val WECHAT_ACTIVITY = "/${GROUP_PAY}/WECHAT_ACTIVITY"
-
-        //支付宝
-        const val ALI_ACTIVITY = "/${GROUP_PAY}/ALI_ACTIVITY"
-
         //练习一
-        const val DEMO_ONE_ACTIVITY = "/${GROUP_PAY}/DEMO_ONE_ACTIVITY"
+        const val DEMO_ONE_ACTIVITY = "/${GROUP_DEMO}/DEMO_ONE_ACTIVITY"
 
         //练习二
-        const val DEMO_TWO_ACTIVITY = "/${GROUP_PAY}/DEMO_TWO_ACTIVITY"
+        const val DEMO_TWO_ACTIVITY = "/${GROUP_DEMO}/DEMO_TWO_ACTIVITY"
     }
 }

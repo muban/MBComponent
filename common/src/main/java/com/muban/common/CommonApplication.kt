@@ -2,11 +2,15 @@ package com.muban.common
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
+import com.tencent.mmkv.MMKV
+import timber.log.Timber
+import timber.log.Timber.DebugTree
 
 abstract class CommonApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initRouter()
+        init()
     }
 
     /**
@@ -21,5 +25,17 @@ abstract class CommonApplication : Application() {
             ARouter.openDebug()
         }
         ARouter.init(this)
+    }
+
+    /**
+     * 初始化三方库
+     */
+    private fun init() {
+        //字段存储
+        MMKV.initialize(this)
+        //日志打印
+        if (BuildConfig.DEBUG) {
+            Timber.plant(DebugTree())
+        }
     }
 }
