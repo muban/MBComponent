@@ -1,11 +1,13 @@
 package com.snail.mbcomponent.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.snail.mbcomponent.R
 import com.snail.mbcomponent.databinding.ItemDemoOneBinding
+import kotlin.random.Random
 
 class DemoOneAdapter(data: MutableList<String>) : RecyclerView.Adapter<CommonViewHolder>() {
     private lateinit var context: Context
@@ -33,5 +35,6 @@ class DemoOneAdapter(data: MutableList<String>) : RecyclerView.Adapter<CommonVie
     override fun onBindViewHolder(holder: CommonViewHolder, position: Int) {
         val dataBinding = holder.dataBinding as ItemDemoOneBinding
         //todo 数据绑定
+        dataBinding.ivItemDemoOne.setBackgroundColor(Color.rgb(Random.nextInt(255),Random.nextInt(255),Random.nextInt(255)))
     }
 }

@@ -71,7 +71,7 @@ abstract class LearnLayoutManager : RecyclerView.LayoutManager() {
      * 需重新绑定数据的缓存：mRecyclerPool.mScrap；
      *
      * 为什么说前面两个是临时缓存呢？
-     * 因为每当RecyclerView的dispatchLayout方法结束之前（当调用RecyclerView的reuqestLayout方法或者调用Adapter的
+     * 因为每当RecyclerView的dispatchLayout方法结束之前（当调用RecyclerView的requestLayout方法或者调用Adapter的
      * 一系列notify方法会回调这个dispatchLayout），它们里面的Holder都会移动到mCachedViews或mRecyclerPool.mScrap中。
      *
      * 那为什么有两个呢？它们之间有什么区别吗？

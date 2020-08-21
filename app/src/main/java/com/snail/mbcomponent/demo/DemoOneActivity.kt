@@ -1,16 +1,17 @@
 package com.snail.mbcomponent.demo
 
+import android.graphics.Path
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.muban.common.router.RouterPaths
 import com.snail.mbcomponent.R
 import com.snail.mbcomponent.adapter.DemoOneAdapter
 import com.snail.mbcomponent.databinding.ActivityDemoOneBinding
+import com.snail.mbcomponent.pathlayoutmanager.PathLayoutManager
+import com.snail.mbcomponent.util.ScreenUtils
 
 /**
  * layoutManager练习
@@ -37,10 +38,23 @@ class DemoOneActivity : AppCompatActivity() {
         for (i in 0 until 10) {
             mList.add("index:${i}")
         }
+        //
+        val path = Path()
+        val screenH = ScreenUtils.getScreen_h(this)
+        val screenW = ScreenUtils.getScreen_w(this)
+        path.moveTo(0f, screenH / 2f)
+        path.rLineTo(screenW.toFloat(), 0f)
+        //
         mAdapter = DemoOneAdapter(mList)
-        dataBinding.rvDemoOne.layoutManager =
-            LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
+//        dataBinding.rvDemoOne.layoutManager =
+//            LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
+        val pathLayoutManager = PathLayoutManager(
+            path,
+            (120 * ScreenUtils.getDensity(this)).toInt(),
+            RecyclerView.HORIZONTAL
+        )
+        pathLayoutManager.setScrollMode(PathLayoutManager.SCROLL_MODE_LOOP)
+        dataBinding.rvDemoOne.layoutManager = pathLayoutManager
         dataBinding.rvDemoOne.adapter = mAdapter
-        LinearSnapHelper().attachToRecyclerView(dataBinding.rvDemoOne)
     }
 }

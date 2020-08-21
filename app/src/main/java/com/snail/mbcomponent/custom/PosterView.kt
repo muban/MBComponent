@@ -96,8 +96,8 @@ class PosterView(context: Context) : View(context) {
                     mLastY = e2.y
                 } else {
                     mSelectedPath?.run {
-                        mX += distanceX
-                        mY += distanceY
+                        mX -= distanceX
+                        mY -= distanceY
                     }
                 }
                 //重绘
