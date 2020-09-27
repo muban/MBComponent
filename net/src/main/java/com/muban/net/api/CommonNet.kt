@@ -1,6 +1,6 @@
 package com.muban.net.api
 
-import com.muban.net.model.BaseModel
+import com.muban.net.model.BaseEntity
 import okhttp3.OkHttpClient
 
 /**
@@ -23,7 +23,7 @@ class CommonNet private constructor() : BaseNet() {
 
     }
 
-    suspend fun common(): BaseModel<Any> {
+    suspend fun common(): BaseEntity<Any> {
         val args = HashMap<String, Any>()
         args["params"] = ""
         return service.common(args)

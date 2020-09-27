@@ -114,6 +114,9 @@ project.ext {
                 versionCode project.ext.versionCode
                 versionName project.ext.versionName
             }
+            extension.dataBinding {
+                enabled = true
+            }
     }
 
     //设置lib android配置（可作为project单独调试）
@@ -126,10 +129,8 @@ project.ext {
                 versionCode project.ext.versionCode
                 versionName project.ext.versionName
             }
-            if (project.ext.isModuleDebug) {
-                extension.dataBinding {
-                    enabled = true
-                }
+            extension.dataBinding {
+                enabled = true
             }
             extension.sourceSets {
                 main {
