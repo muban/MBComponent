@@ -76,7 +76,7 @@ abstract class BaseActivity<VM : BaseViewModel, VDB : ViewDataBinding>
     }
 
     /**
-     * 是否使用eventbus
+     * 是否使用eventBus
      */
     protected fun isUseEventBus() = true
 

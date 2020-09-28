@@ -4,7 +4,7 @@ import com.muban.net.model.BaseEntity
 import okhttp3.OkHttpClient
 
 /**
- * 网络请求类
+ * 网络请求类例子
  */
 class CommonNet private constructor() : BaseNet() {
 
