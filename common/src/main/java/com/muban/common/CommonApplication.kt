@@ -7,8 +7,14 @@ import timber.log.Timber
 import timber.log.Timber.DebugTree
 
 abstract class CommonApplication : Application() {
+
+    companion object {
+        lateinit var application: CommonApplication
+    }
+
     override fun onCreate() {
         super.onCreate()
+        application = this
         initRouter()
         init()
     }

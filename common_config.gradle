@@ -12,7 +12,8 @@ project.ext {
 
     //项目依赖
     libs = [
-            room_version: "2.1.4"
+            room_version    : "2.2.5",
+            lifecycleVersion: "2.2.0"
     ]
 
     //接口地址
@@ -103,6 +104,10 @@ project.ext {
             extension.dataBinding {
                 enabled = true
             }
+            extension.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
+            }
     }
 
     libAndroidConfig = {
@@ -116,6 +121,10 @@ project.ext {
             }
             extension.dataBinding {
                 enabled = true
+            }
+            extension.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
             }
     }
 
@@ -131,6 +140,10 @@ project.ext {
             }
             extension.dataBinding {
                 enabled = true
+            }
+            extension.compileOptions {
+                sourceCompatibility JavaVersion.VERSION_1_8
+                targetCompatibility JavaVersion.VERSION_1_8
             }
             extension.sourceSets {
                 main {
