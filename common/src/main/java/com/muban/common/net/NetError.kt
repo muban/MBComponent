@@ -1,7 +1,7 @@
 package com.muban.common.net
 
 import com.google.gson.JsonParseException
-import com.muban.net.model.BaseEntity
+import com.muban.model.model.BaseEntity
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

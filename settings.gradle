@@ -1,4 +1,4 @@
-include ':net'
+include ':model'
 include ':common'
 include ':app'
 rootProject.name = "MBComponent"
