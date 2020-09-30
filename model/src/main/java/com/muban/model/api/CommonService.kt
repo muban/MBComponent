@@ -1,6 +1,6 @@
 package com.muban.model.api
 
-import com.muban.model.model.BaseEntity
+import com.muban.model.entity.BaseEntity
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
 

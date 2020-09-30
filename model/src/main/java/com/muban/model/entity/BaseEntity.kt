@@ -1,4 +1,4 @@
-package com.muban.model.model
+package com.muban.model.entity
 
 /**
  * 数据基类

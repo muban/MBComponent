@@ -1,11 +1,11 @@
-package com.demo.mb.ui.activity
+package com.demo.mb.view.ui.activity
 
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.mb.R
 import com.demo.mb.databinding.ActivityMainBinding
-import com.demo.mb.ui.adapter.SimpleAdapter
-import com.demo.mb.ui.viewmodel.MainViewModel
+import com.demo.mb.view.ui.adapter.SimpleAdapter
+import com.demo.mb.viewmodel.MainViewModel
 import com.muban.common.base.BaseActivity
 
 class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),

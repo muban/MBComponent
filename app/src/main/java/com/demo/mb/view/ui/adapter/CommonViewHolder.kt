@@ -1,4 +1,4 @@
-package com.demo.mb.ui.adapter
+package com.demo.mb.view.ui.adapter
 
 import android.view.View
 import androidx.annotation.NonNull

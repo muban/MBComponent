@@ -1,4 +1,4 @@
-package com.demo.mb.ui.viewmodel
+package com.demo.mb.viewmodel
 
 import android.app.Application
 import com.muban.common.base.BaseViewModel

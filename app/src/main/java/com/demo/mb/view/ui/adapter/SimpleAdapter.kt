@@ -1,4 +1,4 @@
-package com.demo.mb.ui.adapter
+package com.demo.mb.view.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

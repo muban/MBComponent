@@ -1,4 +1,4 @@
-package com.demo.mb.ui.custom
+package com.demo.mb.view.widget
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
