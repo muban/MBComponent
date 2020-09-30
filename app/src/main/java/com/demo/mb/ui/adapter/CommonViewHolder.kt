@@ -1,4 +1,4 @@
-package com.snail.mbcomponent.adapter
+package com.demo.mb.ui.adapter
 
 import android.view.View
 import androidx.annotation.NonNull

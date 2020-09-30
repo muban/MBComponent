@@ -1,4 +1,4 @@
-package com.snail.mbcomponent.custom
+package com.demo.mb.ui.custom
 
 import android.graphics.Path
 

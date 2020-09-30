@@ -1,4 +1,4 @@
-package com.snail.mbcomponent
+package com.demo.mb
 
 import com.muban.common.CommonApplication
 

@@ -1,17 +1,18 @@
-package com.snail.mbcomponent.adapter
+package com.demo.mb.ui.adapter
 
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.snail.mbcomponent.R
-import com.snail.mbcomponent.databinding.ItemDemoOneBinding
-import kotlin.random.Random
+import com.demo.mb.R
+import com.demo.mb.databinding.ItemSimpleBinding
 
-class DemoOneAdapter(data: MutableList<String>) : RecyclerView.Adapter<CommonViewHolder>() {
+class SimpleAdapter(data: MutableList<String>) : RecyclerView.Adapter<CommonViewHolder>() {
     private lateinit var context: Context
     private val mData = mutableListOf<String>()
+
+    //
+    var mListener: ItemClickListener? = null
 
     init {
         mData.clear()
@@ -28,13 +29,19 @@ class DemoOneAdapter(data: MutableList<String>) : RecyclerView.Adapter<CommonVie
     override fun getItemId(position: Int): Long = position.toLong()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommonViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_demo_one, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_simple, parent, false)
         return CommonViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: CommonViewHolder, position: Int) {
-        val dataBinding = holder.dataBinding as ItemDemoOneBinding
-        //todo 数据绑定
-        dataBinding.ivItemDemoOne.setBackgroundColor(Color.rgb(Random.nextInt(255),Random.nextInt(255),Random.nextInt(255)))
+        val dataBinding = holder.dataBinding as ItemSimpleBinding
+        dataBinding.tvItemSimple.text = mData[position]
+        dataBinding.tvItemSimple.setOnClickListener {
+            mListener?.itemClick(position)
+        }
+    }
+
+    interface ItemClickListener {
+        fun itemClick(position: Int)
     }
 }

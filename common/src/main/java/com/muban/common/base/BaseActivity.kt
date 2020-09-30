@@ -44,14 +44,14 @@ abstract class BaseActivity<VM : BaseViewModel, VDB : ViewDataBinding>
     }
 
     /**
-     * 创建viewModel
-     */
-    abstract fun createViewModel()
-
-    /**
      * 获取布局文件
      */
     abstract fun getContentViewId(): Int
+
+    /**
+     * 创建viewModel
+     */
+    abstract fun createViewModel()
 
     /**
      * 初始化控件

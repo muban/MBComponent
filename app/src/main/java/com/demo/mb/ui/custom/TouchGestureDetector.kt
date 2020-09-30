@@ -1,4 +1,4 @@
-package com.snail.mbcomponent.custom
+package com.demo.mb.ui.custom
 
 import android.content.Context
 import android.view.GestureDetector
@@ -198,7 +198,8 @@ class TouchGestureDetector(context: Context?, listener: IOnTouchGestureListener)
         fun onScrollEnd(e: MotionEvent?)
     }
 
-    abstract class OnTouchGestureListener : IOnTouchGestureListener {
+    abstract class OnTouchGestureListener :
+        IOnTouchGestureListener {
         /**
          * 沿用系统的GestureDetector逻辑，双击时第二次onDown在onDoubleTap之后调用
          *

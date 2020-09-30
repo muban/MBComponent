@@ -1,4 +1,4 @@
-package com.snail.mbcomponent
+package com.demo.mb
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
