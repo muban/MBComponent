@@ -2,6 +2,8 @@ package com.muban.common
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
+import com.luck.picture.lib.config.PictureSelectionConfig
+import com.muban.common.util.GlideEngine
 import com.tencent.mmkv.MMKV
 import timber.log.Timber
 import timber.log.Timber.DebugTree
@@ -43,5 +45,7 @@ abstract class CommonApplication : Application() {
         if (BuildConfig.DEBUG) {
             Timber.plant(DebugTree())
         }
+        //设置图片加载器
+        PictureSelectionConfig.imageEngine = GlideEngine.createGlideEngine()
     }
 }
