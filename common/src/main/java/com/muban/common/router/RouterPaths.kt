@@ -6,10 +6,8 @@ class RouterPaths {
         //练习模块
         private const val GROUP_DEMO = "demo"
 
-        //练习一
-        const val DEMO_ONE_ACTIVITY = "/${GROUP_DEMO}/DEMO_ONE_ACTIVITY"
+        //运动布局demo-MotionLayout
+        const val ACTIVITY_MOTION = "/${GROUP_DEMO}/ACTIVITY_MOTION1"
 
-        //练习二
-        const val DEMO_TWO_ACTIVITY = "/${GROUP_DEMO}/DEMO_TWO_ACTIVITY"
     }
 }

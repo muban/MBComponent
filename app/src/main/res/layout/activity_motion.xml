@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/ml_motion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/motion_scene_demo"
+        app:motionDebug="SHOW_ALL"
+        tools:context="com.demo.mb.view.ui.activity.MotionActivity">
+
+<!--        <View-->
+<!--            android:id="@+id/view"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp" />-->
+
+        <ImageView
+            android:id="@+id/zero"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/planet1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="@id/zero"
+            app:layout_constraintEnd_toEndOf="@id/zero"
+            app:layout_constraintStart_toStartOf="@id/zero"
+            app:layout_constraintTop_toTopOf="@id/zero"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/planet2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="@id/zero"
+            app:layout_constraintEnd_toEndOf="@id/zero"
+            app:layout_constraintStart_toStartOf="@id/zero"
+            app:layout_constraintTop_toTopOf="@id/zero"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/planet3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="@id/zero"
+            app:layout_constraintEnd_toEndOf="@id/zero"
+            app:layout_constraintStart_toStartOf="@id/zero"
+            app:layout_constraintTop_toTopOf="@id/zero"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

@@ -1,12 +1,14 @@
 package com.demo.mb.view.ui.activity
 
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.demo.mb.R
 import com.demo.mb.databinding.ActivityMainBinding
 import com.demo.mb.view.ui.adapter.SimpleAdapter
 import com.demo.mb.viewmodel.MainViewModel
 import com.muban.common.base.BaseActivity
+import com.muban.common.router.RouterPaths
 
 class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
     SimpleAdapter.ItemClickListener {
@@ -18,7 +20,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
     override fun getContentViewId(): Int = R.layout.activity_main
 
     override fun createViewModel() {
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        mViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
     override fun initView() {
@@ -26,9 +28,8 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
     }
 
     private fun initRecycler() {
-        repeat(5) {
-            mList.add("学习目标$it")
-        }
+        mList.add("MotionLayout")
+        //
         mAdapter = SimpleAdapter(mList)
         binding.rvDemo.layoutManager = LinearLayoutManager(this)
         binding.rvDemo.adapter = mAdapter
@@ -45,6 +46,8 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
      * 功能点击
      */
     override fun itemClick(position: Int) {
-
+        when (position) {
+            0 -> ARouter.getInstance().build(RouterPaths.ACTIVITY_MOTION).navigation()
+        }
     }
 }
