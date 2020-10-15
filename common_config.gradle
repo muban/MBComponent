@@ -13,6 +13,7 @@ project.ext {
     //项目依赖
     libs = [
             room_version    : "2.2.5",
+            compose_version : "1.0.0-alpha05",
             lifecycleVersion: "2.2.0"
     ]
 

@@ -29,6 +29,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
 
     private fun initRecycler() {
         mList.add("MotionLayout")
+        mList.add("Compose")
         //
         mAdapter = SimpleAdapter(mList)
         binding.rvDemo.layoutManager = LinearLayoutManager(this)

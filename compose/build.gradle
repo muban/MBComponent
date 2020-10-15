@@ -1,0 +1,56 @@
+apply from: "${rootProject.rootDir}/common_config.gradle"
+//lib默认配置
+libDefaultConfig project
+
+android {
+    resourcePrefix "compose_"
+
+    buildFeatures {
+        // Enables Jetpack Compose for this module
+        compose true
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+        useIR = true
+    }
+
+    composeOptions {
+        kotlinCompilerVersion '1.4.0'
+        kotlinCompilerExtensionVersion "${libs.compose_version}"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    //compose
+    api "androidx.compose.ui:ui:${libs.compose_version}"
+    // Tooling support (Previews, etc.)
+    api "androidx.ui:ui-tooling:${libs.compose_version}"
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    api "androidx.compose.foundation:foundation:${libs.compose_version}"
+    // Material Design
+    api "androidx.compose.material:material:${libs.compose_version}"
+    // Material design icons
+    api "androidx.compose.material:material-icons-core:${libs.compose_version}"
+    api "androidx.compose.material:material-icons-extended:${libs.compose_version}"
+    // Integration with observables
+    api "androidx.compose.runtime:runtime-livedata:${libs.compose_version}"
+//    implementation "androidx.compose.runtime:runtime-rxjava2:${libs.compose_version}"
+    // UI Tests
+    androidTestApi "androidx.ui:ui-test:${libs.compose_version}"
+}
