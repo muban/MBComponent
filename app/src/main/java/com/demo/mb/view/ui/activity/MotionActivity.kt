@@ -13,7 +13,7 @@ import es.dmoral.toasty.Toasty
 /**
  * MotionLayout demo
  */
-@Route(path = RouterPaths.ACTIVITY_MOTION)
+@Route(path = RouterPaths.MotionActivity)
 class MotionActivity : BaseActivity<DemoViewModel, ActivityMotionBinding>() {
 
     override fun getContentViewId(): Int = R.layout.activity_motion

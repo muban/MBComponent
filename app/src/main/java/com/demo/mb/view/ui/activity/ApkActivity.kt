@@ -13,7 +13,7 @@ import com.muban.common.router.RouterPaths
 import java.io.File
 
 
-@Route(path = RouterPaths.ACTIVITY_APK)
+@Route(path = RouterPaths.ApkActivity)
 class ApkActivity : BaseActivity<DemoViewModel, ActivityApkBinding>(),
     ApkAdapter.ItemClickListener {
 

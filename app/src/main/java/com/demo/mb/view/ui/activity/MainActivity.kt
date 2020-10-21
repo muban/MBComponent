@@ -31,6 +31,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
         mList.add("MotionLayout")
         mList.add("Compose")
         mList.add("APK")
+        mList.add("Material")
         //
         mAdapter = SimpleAdapter(mList)
         binding.rvDemo.layoutManager = LinearLayoutManager(this)
@@ -49,8 +50,10 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
      */
     override fun itemClick(position: Int) {
         when (position) {
-            0 -> ARouter.getInstance().build(RouterPaths.ACTIVITY_MOTION).navigation()
-            2 -> ARouter.getInstance().build(RouterPaths.ACTIVITY_APK).navigation()
+            0 -> ARouter.getInstance().build(RouterPaths.MotionActivity).navigation()
+            1 -> ARouter.getInstance().build(RouterPaths.ComposeActivity).navigation()
+            2 -> ARouter.getInstance().build(RouterPaths.ApkActivity).navigation()
+            3 -> ARouter.getInstance().build(RouterPaths.MaterialDemoActivity).navigation()
         }
     }
 }

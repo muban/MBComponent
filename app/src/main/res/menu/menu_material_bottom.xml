@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/page_1"
+        android:icon="@drawable/ic_home"
+        android:title="Page1"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/page_2"
+        android:icon="@drawable/ic_home"
+        android:title="Page2"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/page_3"
+        android:icon="@drawable/ic_home"
+        android:title="Page3"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/page_4"
+        android:icon="@drawable/ic_home"
+        android:title="Page4"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/page_5"
+        android:icon="@drawable/ic_home"
+        android:title="Page5"
+        tools:ignore="HardcodedText" />
+</menu>

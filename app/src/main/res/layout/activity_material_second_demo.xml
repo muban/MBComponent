@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_msd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_msd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="jump"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:state_dragged="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/pic_1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="MaterialCardView"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Cards have an app:state_dragged that has foreground and elevation changes to convey motion. We recommend using ViewDragHelper to set the dragged state"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_msd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:chipSpacingHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_msd">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_msd_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip"
+                app:chipIcon="@drawable/ic_btn_demo"
+                app:chipIconSize="20dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_msd_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_msd_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ChipOne"
+                app:chipIcon="@drawable/ic_btn_demo"
+                app:chipIconSize="20dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_msd_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FilterOne"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_msd_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ChipTwo"
+                app:chipIcon="@drawable/ic_btn_demo"
+                app:chipIconSize="20dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_msd_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FilterTwo"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.chip.ChipGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
