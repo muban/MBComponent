@@ -9,6 +9,7 @@ class RouterPaths {
         //运动布局demo-MotionLayout
         const val ACTIVITY_MOTION = "/${GROUP_DEMO}/ACTIVITY_MOTION"
         const val ACTIVITY_COMPOSE = "/${GROUP_DEMO}/ACTIVITY_COMPOSE"
+        const val ACTIVITY_APK = "/${GROUP_DEMO}/ACTIVITY_APK"
 
     }
 }
