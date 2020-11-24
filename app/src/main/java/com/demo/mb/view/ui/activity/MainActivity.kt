@@ -32,6 +32,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
         mList.add("Compose")
         mList.add("APK")
         mList.add("Material")
+        mList.add("Hilt")
         //
         mAdapter = SimpleAdapter(mList)
         binding.rvDemo.layoutManager = LinearLayoutManager(this)
@@ -54,6 +55,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
             1 -> ARouter.getInstance().build(RouterPaths.ComposeActivity).navigation()
             2 -> ARouter.getInstance().build(RouterPaths.ApkActivity).navigation()
             3 -> ARouter.getInstance().build(RouterPaths.MaterialDemoActivity).navigation()
+            4 -> ARouter.getInstance().build(RouterPaths.HiltActivity).navigation()
         }
     }
 }

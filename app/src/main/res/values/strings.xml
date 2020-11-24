@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">练习册</string>
+    <string name="hilt_scope_tip">如果想要在全程序范围内共用某个对象的实例，那么就使用@Singleton。如果想要在某个Activity，以及它内部包含的Fragment和View中共用某个对象的实例，那么就使用@ActivityScoped。以此类推。\n另外，我们不必非得在某个Module中使用作用域注解，也可以直接将它声明到任何可注入类的上方。</string>
+    <string name="link_hilt">https://mp.weixin.qq.com/s/OEX1d2cU1zGG5BBM-nANBg</string>
 </resources>

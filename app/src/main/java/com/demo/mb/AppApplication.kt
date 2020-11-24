@@ -6,7 +6,10 @@ import android.os.Bundle
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.demo.mb.util.LifecycleChecker
 import com.muban.common.CommonApplication
+import dagger.hilt.android.HiltAndroidApp
 
+//hilt依赖注入注解
+@HiltAndroidApp
 class AppApplication : CommonApplication(), Application.ActivityLifecycleCallbacks {
     override fun onCreate() {
         super.onCreate()
