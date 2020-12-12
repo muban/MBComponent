@@ -1,6 +1,17 @@
 apply from: "${rootProject.rootDir}/common_config.gradle"
 appDefaultConfig project
 
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url '../analysis_plugin_repo' }
+    }
+    dependencies {
+        classpath 'com.muban.plugin:analysis_plugin:1.0.0'
+    }
+}
+
 android {
     buildTypes {
         release {
@@ -12,6 +23,10 @@ android {
 
 dependencies {
     implementation project(path: ':common')
+    //测试
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //room数据库框架(选用)
     kapt "androidx.room:room-compiler:${libs.room_version}"
     //hilt依赖注入

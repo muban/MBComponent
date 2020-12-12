@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MaterialTheme">
+        <activity android:name=".view.ui.activity.AopActivity" />
         <activity android:name=".view.ui.activity.HiltActivity" />
         <activity android:name=".view.ui.activity.MaterialDemoSecondActivity" />
         <activity android:name=".view.ui.activity.MaterialDemoActivity" />

@@ -1,3 +1,4 @@
+include ':analysis_plugin'
 include ':compose'
 include ':model'
 include ':common'

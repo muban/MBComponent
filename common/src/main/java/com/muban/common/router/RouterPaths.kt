@@ -13,6 +13,7 @@ class RouterPaths {
         const val MaterialDemoActivity = "/${GROUP_DEMO}/MaterialDemoActivity"
         const val MaterialDemoSecondActivity = "/${GROUP_DEMO}/MaterialDemoSecondActivity"
         const val HiltActivity = "/${GROUP_DEMO}/HiltActivity"
+        const val AopActivity = "/${GROUP_DEMO}/AopActivity"
 
     }
 }

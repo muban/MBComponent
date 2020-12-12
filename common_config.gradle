@@ -35,6 +35,7 @@ project.ext {
             extension.apply plugin: 'kotlin-android-extensions'
             extension.apply plugin: 'kotlin-kapt'
             extension.apply plugin: 'dagger.hilt.android.plugin'
+            extension.apply plugin: 'com.muban.analysis.plugin'
             extension.description "app"
             //app android 配置
             appAndroidConfig extension.android
