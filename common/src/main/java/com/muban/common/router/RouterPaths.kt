@@ -14,6 +14,7 @@ class RouterPaths {
         const val MaterialDemoSecondActivity = "/${GROUP_DEMO}/MaterialDemoSecondActivity"
         const val HiltActivity = "/${GROUP_DEMO}/HiltActivity"
         const val AopActivity = "/${GROUP_DEMO}/AopActivity"
+        const val FileActivity = "/${GROUP_DEMO}/FileActivity"
 
     }
 }

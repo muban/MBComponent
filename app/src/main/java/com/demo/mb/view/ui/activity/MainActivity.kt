@@ -34,6 +34,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
         mList.add("Material")
         mList.add("Hilt")
         mList.add("AOP")
+        mList.add("File")
         //
         mAdapter = SimpleAdapter(mList)
         binding.rvDemo.layoutManager = LinearLayoutManager(this)
@@ -45,6 +46,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
     }
 
     override fun initData() {
+
     }
 
     /**
@@ -58,6 +60,7 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>(),
             3 -> ARouter.getInstance().build(RouterPaths.MaterialDemoActivity).navigation()
             4 -> ARouter.getInstance().build(RouterPaths.HiltActivity).navigation()
             5 -> ARouter.getInstance().build(RouterPaths.AopActivity).navigation()
+            6 -> ARouter.getInstance().build(RouterPaths.FileActivity).navigation()
         }
     }
 }
