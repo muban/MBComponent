@@ -16,7 +16,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerVersion '1.4.0'
+        kotlinCompilerVersion "$kotlin_version"
         kotlinCompilerExtensionVersion "${libs.compose_version}"
     }
 
@@ -40,7 +40,7 @@ dependencies {
     //compose
     api "androidx.compose.ui:ui:${libs.compose_version}"
     // Tooling support (Previews, etc.)
-    api "androidx.ui:ui-tooling:${libs.compose_version}"
+    api "androidx.compose.ui:ui-tooling:1.0.0-beta01"
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
     api "androidx.compose.foundation:foundation:${libs.compose_version}"
     // Material Design
@@ -50,7 +50,7 @@ dependencies {
     api "androidx.compose.material:material-icons-extended:${libs.compose_version}"
     // Integration with observables
     api "androidx.compose.runtime:runtime-livedata:${libs.compose_version}"
-//    implementation "androidx.compose.runtime:runtime-rxjava2:${libs.compose_version}"
+    api "androidx.compose.runtime:runtime-rxjava2:${libs.compose_version}"
     // UI Tests
-    androidTestApi "androidx.ui:ui-test:${libs.compose_version}"
+    androidTestApi "androidx.compose.ui:ui-test-junit4:${libs.compose_version}"
 }
