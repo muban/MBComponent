@@ -12,8 +12,9 @@ project.ext {
 
     //项目依赖
     libs = [
+            kotlin_version  : "1.4.30",
             room_version    : "2.2.5",
-            compose_version : "1.0.0-alpha10",
+            compose_version : "1.0.0-beta01",
             lifecycleVersion: "2.2.0"
     ]
 
@@ -32,10 +33,9 @@ project.ext {
         extension ->
             extension.apply plugin: 'com.android.application'
             extension.apply plugin: 'kotlin-android'
-            extension.apply plugin: 'kotlin-android-extensions'
             extension.apply plugin: 'kotlin-kapt'
             extension.apply plugin: 'dagger.hilt.android.plugin'
-            extension.apply plugin: 'com.muban.analysis.plugin'
+//            extension.apply plugin: 'com.muban.analysis.plugin'
             extension.description "app"
             //app android 配置
             appAndroidConfig extension.android
@@ -50,7 +50,6 @@ project.ext {
         extension ->
             extension.apply plugin: 'com.android.library'
             extension.apply plugin: 'kotlin-android'
-            extension.apply plugin: 'kotlin-android-extensions'
             extension.apply plugin: 'kotlin-kapt'
             extension.description "lib"
             //lib android 配置
@@ -66,7 +65,6 @@ project.ext {
         extension ->
             extension.apply plugin: 'com.android.library'
             extension.apply plugin: 'kotlin-android'
-            extension.apply plugin: 'kotlin-android-extensions'
             extension.apply plugin: 'kotlin-kapt'
             extension.description "lib"
             //lib android 配置
@@ -110,6 +108,15 @@ project.ext {
             extension.compileOptions {
                 sourceCompatibility JavaVersion.VERSION_1_8
                 targetCompatibility JavaVersion.VERSION_1_8
+            }
+            extension.kotlinOptions {
+                jvmTarget = '1.8'
+            }
+            extension.buildFeatures {
+                compose true
+            }
+            extension.composeOptions {
+                kotlinCompilerExtensionVersion libs.compose_version
             }
     }
 
